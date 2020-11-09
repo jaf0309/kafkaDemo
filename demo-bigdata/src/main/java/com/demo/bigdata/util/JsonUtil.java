@@ -1,4 +1,4 @@
-package com.demo.bigdata.sparkandes.common;
+package com.demo.bigdata.util;
 
 import java.io.*;
 

@@ -1,6 +1,6 @@
-package com.demo.bigdata.config.es;
+package com.demo.bigdata.config;
 
-import com.demo.bigdata.sparkandes.common.JsonUtil;
+import org.apache.hadoop.hdfs.web.JsonUtil;
 import org.apache.http.HttpHost;
 import org.elasticsearch.action.support.master.AcknowledgedResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -96,7 +96,7 @@ public class ElasticsearchConfig {
         }
         // 创建索引模板
         InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(indexTemplateJsonFileName);
-        String indexTemplate = JsonUtil.readJsonFile(inputStream);
+        String indexTemplate = JSON.(inputStream);
         PutIndexTemplateRequest request = new PutIndexTemplateRequest(indexTemplateName);
         request.source(indexTemplate, XContentType.JSON);
         AcknowledgedResponse putTemplateResponse = client.indices().putTemplate(request, RequestOptions.DEFAULT);

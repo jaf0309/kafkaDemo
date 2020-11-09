@@ -7,7 +7,7 @@
         <module>demo-job</module>
         <module>demo-kafka</module>
         <module>demo-io</module>
-        <module>demo-spark-es</module>
+        <module>demo-bigdata</module>
         <module>demo-concurrency</module>
     </modules>
     <parent>
