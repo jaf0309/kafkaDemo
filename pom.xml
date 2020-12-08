@@ -9,6 +9,7 @@
         <module>demo-io</module>
         <module>demo-bigdata</module>
         <module>demo-concurrency</module>
+        <module>demo-leetcode</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

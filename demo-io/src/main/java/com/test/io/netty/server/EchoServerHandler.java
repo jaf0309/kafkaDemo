@@ -1,4 +1,4 @@
-package com.test.concurrency.netty.server;
+package com.test.io.netty.server;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;

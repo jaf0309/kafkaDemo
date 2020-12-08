@@ -1,6 +1,7 @@
 package com.demo.bigdata.config;
 
-import org.apache.hadoop.hdfs.web.JsonUtil;
+import com.alibaba.fastjson.JSON;
+import com.demo.bigdata.util.JsonUtil;
 import org.apache.http.HttpHost;
 import org.elasticsearch.action.support.master.AcknowledgedResponse;
 import org.elasticsearch.client.RequestOptions;
@@ -96,7 +97,7 @@ public class ElasticsearchConfig {
         }
         // 创建索引模板
         InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(indexTemplateJsonFileName);
-        String indexTemplate = JSON.(inputStream);
+        String indexTemplate = JsonUtil.readJsonFile(inputStream);
         PutIndexTemplateRequest request = new PutIndexTemplateRequest(indexTemplateName);
         request.source(indexTemplate, XContentType.JSON);
         AcknowledgedResponse putTemplateResponse = client.indices().putTemplate(request, RequestOptions.DEFAULT);
