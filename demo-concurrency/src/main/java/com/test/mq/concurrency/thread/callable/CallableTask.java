@@ -1,4 +1,4 @@
-package com.test.concurrency.thread.callable;
+package com.test.mq.concurrency.thread.callable;
 
 import java.util.ArrayList;
 import java.util.List;

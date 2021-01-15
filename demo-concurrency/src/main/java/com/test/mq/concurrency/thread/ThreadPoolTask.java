@@ -1,4 +1,4 @@
-package com.test.concurrency.thread;
+package com.test.mq.concurrency.thread;
 
 
 

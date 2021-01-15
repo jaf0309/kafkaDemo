@@ -1,4 +1,4 @@
-package com.test.concurrency.base.spring.life;
+package com.test.mq.concurrency.base.spring.life;
 
 import org.springframework.stereotype.Component;
 

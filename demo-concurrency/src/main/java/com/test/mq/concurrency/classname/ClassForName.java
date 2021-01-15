@@ -1,4 +1,4 @@
-package com.test.concurrency.classname;
+package com.test.mq.concurrency.classname;
 
 
 public class ClassForName {

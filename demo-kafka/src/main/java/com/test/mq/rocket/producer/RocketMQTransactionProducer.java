@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.aliyun.openservices.demo.producer;
+package com.test.mq.rocket.producer;
 
 import com.aliyun.openservices.demo.MqConfig;
 import org.apache.rocketmq.acl.common.AclClientRPCHook;

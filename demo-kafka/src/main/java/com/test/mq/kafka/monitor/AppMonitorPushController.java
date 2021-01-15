@@ -1,4 +1,4 @@
-package com.test.kafka.monitor;
+package com.test.mq.kafka.monitor;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;

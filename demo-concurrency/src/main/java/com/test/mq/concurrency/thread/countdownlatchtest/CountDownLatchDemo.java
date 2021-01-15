@@ -1,4 +1,4 @@
-package com.test.concurrency.thread.countdownlatchtest;
+package com.test.mq.concurrency.thread.countdownlatchtest;
 
 import java.util.concurrent.*;
 

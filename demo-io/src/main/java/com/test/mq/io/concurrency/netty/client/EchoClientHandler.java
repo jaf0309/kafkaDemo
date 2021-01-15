@@ -1,4 +1,4 @@
-package com.test.io.concurrency.netty.client;
+package com.test.mq.io.concurrency.netty.client;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;

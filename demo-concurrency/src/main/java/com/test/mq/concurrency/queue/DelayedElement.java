@@ -1,4 +1,4 @@
-package com.test.concurrency.queue;
+package com.test.mq.concurrency.queue;
 
 import org.springframework.lang.NonNull;
 

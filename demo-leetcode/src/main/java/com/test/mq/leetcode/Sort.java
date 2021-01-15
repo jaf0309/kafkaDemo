@@ -1,4 +1,4 @@
-package com.test.leetcode;
+package com.test.mq.leetcode;
 
 /**
  * 相关排序

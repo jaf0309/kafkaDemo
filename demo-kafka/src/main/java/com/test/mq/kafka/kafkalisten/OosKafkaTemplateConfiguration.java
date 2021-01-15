@@ -1,4 +1,4 @@
-package com.test.kafka.kafkalisten;
+package com.test.mq.kafka.kafkalisten;
 
 import org.apache.kafka.clients.admin.AdminClient;
 import org.apache.kafka.clients.admin.AdminClientConfig;

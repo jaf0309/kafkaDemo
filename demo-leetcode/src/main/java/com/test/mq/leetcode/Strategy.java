@@ -1,4 +1,4 @@
-package com.test.leetcode;
+package com.test.mq.leetcode;
 
 public interface Strategy {
     //判断两个数据元素是否相等

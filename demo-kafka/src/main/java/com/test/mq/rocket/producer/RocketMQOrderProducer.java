@@ -14,10 +14,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.aliyun.openservices.demo.producer;
+package com.test.mq.rocket.producer;
 
 import com.aliyun.openservices.demo.MqConfig;
-import java.util.List;
 import org.apache.rocketmq.acl.common.AclClientRPCHook;
 import org.apache.rocketmq.acl.common.SessionCredentials;
 import org.apache.rocketmq.client.AccessChannel;
@@ -29,6 +28,8 @@ import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageQueue;
 import org.apache.rocketmq.remoting.RPCHook;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
+
+import java.util.List;
 
 public class RocketMQOrderProducer {
     private static RPCHook getAclRPCHook() {

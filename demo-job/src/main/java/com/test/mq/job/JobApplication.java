@@ -1,4 +1,4 @@
-package com.test.job;
+package com.test.mq.job;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

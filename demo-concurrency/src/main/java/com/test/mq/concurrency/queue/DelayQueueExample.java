@@ -1,10 +1,6 @@
-package com.test.concurrency.queue;
-
-import org.springframework.lang.NonNull;
+package com.test.mq.concurrency.queue;
 
 import java.util.concurrent.DelayQueue;
-import java.util.concurrent.Delayed;
-import java.util.concurrent.TimeUnit;
 
 public class DelayQueueExample {
 

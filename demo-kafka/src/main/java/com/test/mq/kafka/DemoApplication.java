@@ -1,4 +1,4 @@
-package com.test.kafka;
+package com.test.mq.kafka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

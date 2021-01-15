@@ -1,4 +1,4 @@
-package com.test.io.netty.server;
+package com.test.mq.io.netty.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

@@ -1,4 +1,4 @@
-package com.test.kafka.producer;
+package com.test.mq.kafka.producer;
 
 
 import org.slf4j.Logger;

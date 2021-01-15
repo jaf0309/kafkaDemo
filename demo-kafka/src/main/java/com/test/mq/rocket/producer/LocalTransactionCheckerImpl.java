@@ -1,4 +1,4 @@
-package com.aliyun.openservices.demo.producer;
+package com.test.mq.rocket.producer;
 
 import org.apache.rocketmq.client.producer.LocalTransactionState;
 import org.apache.rocketmq.client.producer.TransactionCheckListener;

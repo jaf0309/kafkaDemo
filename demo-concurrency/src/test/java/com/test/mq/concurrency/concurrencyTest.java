@@ -1,7 +1,7 @@
-package com.test.concurrency;
+package com.test.mq.concurrency;
 
 
-import com.test.concurrency.classname.ClassForName;
+import com.test.mq.concurrency.classname.ClassForName;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +17,7 @@ public class concurrencyTest {
     @Ignore
     public void TestClassForName(){
         try {
-            Class.forName("com.test.concurrency.classname.ClassForName");
+            Class.forName("com.test.mq.concurrency.classname.ClassForName");
             System.out.println("---结束---");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -29,7 +29,7 @@ public class concurrencyTest {
     @Ignore
     public void TestClassLoad(){
         try {
-            ClassLoader.getSystemClassLoader().loadClass("com.test.concurrency.classname.ClassForName");
+            ClassLoader.getSystemClassLoader().loadClass("com.test.mq.concurrency.classname.ClassForName");
             System.out.println("------");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.test.job.task;
+package com.test.mq.job.task;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import org.slf4j.Logger;

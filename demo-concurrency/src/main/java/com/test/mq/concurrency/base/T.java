@@ -1,4 +1,4 @@
-package com.test.concurrency.base;
+package com.test.mq.concurrency.base;
 
 public class T {
 }

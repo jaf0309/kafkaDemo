@@ -1,4 +1,4 @@
-package com.test.kafka.kafkalisten;
+package com.test.mq.kafka.kafkalisten;
 
 
 
