@@ -1,2 +1,5 @@
 # kafkaDemo
-自己的一些学习demo
+参考:
+https://github.com/Snailclimb/awesome-java
+JAVA常见面试题
+
