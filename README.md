@@ -6,7 +6,7 @@
 4:石山https://github.com/shishan100/Java-Interview-Advanced  
 # 大数据学习参考github
 1:https://github.com/wangzhiwubigdata/God-Of-BigData  
-2:https://github.com/wangzhiwubigdata/God-Of-BigData  
+2:https://github.com/heibaiying/BigData-Notes  
 
 
 
