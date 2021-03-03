@@ -1,4 +1,5 @@
-# kafkaDemo
+学习目标
+
 # java学习参考github:  
 1:提供了很多好的github学习汇总https://github.com/Snailclimb/awesome-java  
 2:三太子敖丙https://github.com/AobingJava/JavaFamily  
