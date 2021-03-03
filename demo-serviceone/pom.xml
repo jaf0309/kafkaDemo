@@ -10,8 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>demo-serviceone</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>demo-spring-web</module>
+    </modules>
 
-<dependencies>
+    <dependencies>
     <dependency>
         <groupId>com.thoughtworks.xstream</groupId>
         <artifactId>xstream</artifactId>

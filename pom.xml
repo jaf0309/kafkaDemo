@@ -11,6 +11,8 @@
         <module>demo-leetcode</module>
         <module>demo-serviceone</module>
         <module>demo-servicetwo</module>
+        <module>demo-dubbo</module>
+        <module>demo-dubbo-privide</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
