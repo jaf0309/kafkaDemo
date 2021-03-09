@@ -4,7 +4,7 @@
 
 ![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/JVM.png)
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\jvm-paramselect.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/jvm-paramselect.jpg)
 
 ## 2：JRE/JDK/JVM是什么关系
 
@@ -81,7 +81,7 @@ ClassLoader.loadClass(className)方法，内部实际调用的方法是 ClassLoa
 
 ### 4：JVM的体系结构
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\class文件.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/class文件.jpg)
 
 类装载器（ClassLoader）（用来装载.class文件）
 
@@ -259,7 +259,7 @@ Thread中维护了ThreadLocalMap，所以ThreadLocalMap的生命周期和Thread�
 
 它有两点不足：一个效率问题，标记和清除过程都效率不高；一个是空间问题，标记清除之后会产生大量不连续的内存碎片（类似于我们电脑的磁盘碎片），空间碎片太多导致需要分配大对象时无法找到足够的连续内存而不得不提前触发另一次垃圾回收动作。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\标记-清除.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/标记-清除.jpg)
 
 #### 2、复制算法
 
@@ -267,13 +267,13 @@ Thread中维护了ThreadLocalMap，所以ThreadLocalMap的生命周期和Thread�
 
 年轻代一般选择复制算法
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\复制-算法.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/复制-算法.jpg)
 
 #### 3、标记-整理算法
 
 复制算法在对象存活率较高时就会进行频繁的复制操作，效率将降低。因此又有了标记-整理算法，标记过程同标记-清除算法，但是在后续步骤不是直接对对象进行清理，而是让所有存活的对象都向一侧移动，然后直接清理掉端边界以外的内存。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\标记-整理.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/标记-整理.jpg)
 
 #### 4、分代收集算法
 
@@ -281,7 +281,7 @@ Thread中维护了ThreadLocalMap，所以ThreadLocalMap的生命周期和Thread�
 
 这样就可以根据各个年代的特点采用不同的收集算法。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\分代-收集.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/分代-收集.jpg)
 
 新生代中的对象“朝生夕死”，每次GC时都会有大量对象死去，少量存活，使用复制算法。新生代又分为Eden区和Survivor区（Survivor from、Survivor to），大小比例默认为8:1:1。
 
@@ -335,7 +335,7 @@ Thread中维护了ThreadLocalMap，所以ThreadLocalMap的生命周期和Thread�
 
 JDK7/8后，HotSpot虚拟机所有收集器及组合（连线）如下：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\收集器.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/收集器.jpg)
 
 jdk1.7 默认垃圾收集器Parallel Scavenge（新生代）+Parallel Old（老年代）
 
@@ -351,7 +351,7 @@ Serial收集器是最基本、历史最久的收集器，曾是新生代手机�
 
 工作示意图：
 
-​	![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\serial收集器.jpg)
+​	![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/serial收集器.jpg)
 
 它的优点是简单高效，在单个 CPU 环境下，由于没有线程交互的开销，因此拥有最高的单线程收集效率。
 
@@ -365,13 +365,13 @@ ParNew收集器是Serial收集器的多线程版本，除了使用了多线程�
 
 工作示意图：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\ParNew收集器.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/ParNew收集器.jpg)
 
 ##### 3.Parallel Scavenge收集器
 
 新生代收集器，并行的多线程收集器。它的目标是达到一个可控的吞吐量（就是CPU运行用户代码的时间与CPU总消耗时间的比值，即 吞吐量=行用户代码的时间/[行用户代码的时间+垃圾收集时间]），这样可以高效率的利用CPU时间，尽快完成程序的运算任务，适合在后台运算而不需要太多交互的任务。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\Parallel Scavenge收集器.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/Parallel Scavenge收集器.jpg)
 
 ##### 4.Serial Old收集器（**标记整理**）
 
@@ -385,7 +385,7 @@ JDK 1.5之前的版本中雨Parallel Scavenge 收集器搭配使用
 
 工作示意图：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\Parallel Old收集器.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/Parallel Old收集器.jpg)
 
 ##### 6.CMS收集器(标记-清除)
 
@@ -405,7 +405,7 @@ CMS(Concurrent Mark Sweep)收集器是一种以获取最短回收停顿时间为
 
 工作示意图：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\CMS收集器.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/CMS收集器.jpg)
 
 CSM收集器有3个缺点：
 
@@ -481,13 +481,13 @@ G1跟踪各个Region获得其收集价值大小，在后台维护一个优先列
 
 工作示意图：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\G1收集器.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/G1收集器.jpg)
 
 ### 10：基本结构
 
 从Java平台的逻辑结构上来看，我们可以从下图来了解JVM：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\JVM-基本结构.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/JVM-基本结构.jpg)
 
 
 
@@ -936,9 +936,9 @@ Arrays.stream()：接受一个数组并产生一个流
 
 flatMap:将生成的多个流扁平化成单个流
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\PASOScreenShot20190115175253841.PNG)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/PASOScreenShot20190115175253841.PNG)
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\PASOScreenShot20190115175121263.PNG)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/PASOScreenShot20190115175121263.PNG)
 
 anyMatch:流中是否有一个元素能匹配给定的谓词，返回一个Boolean,是终端操作
 
@@ -958,7 +958,7 @@ findFirst:返回流中的第一个元素
 
 安装和启动redis:步骤：wget—>make—>make install —>make test —> 程序会复制到/usr/local/bin目录下
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\redis.PNG)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/redis.PNG)
 
 启动：redis-cli -h localhost -p 6379
 
@@ -1069,9 +1069,9 @@ DISCARD：取消事务，放弃执行事务块内的所有命令。
 
 图展示了文件事件处理器的四个组成部分， 它们分别是套接字、 I/O 多路复用程序、 文件事件分派器（dispatcher）、 以及文件事件处理器。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\文件处理器.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/文件处理器.jpg)
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\redis进程.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/redis进程.png)
 
 文件事件是对套接字操作的抽象， 每当一个套接字准备好执行连接应答（accept）、写入、读取、关闭等操作时， 就会产生一个文件事件。 因为一个服务器通常会连接多个套接字， 所以多个文件事件有可能会并发地出现。
 
@@ -1159,7 +1159,7 @@ redis 确定驱逐某个键值对后，会删除这个数据并将这个数据�
 Memcached与Redis都是C语言实现，但是不约而同的都抛弃了传统C语言中的malloc/free函数，而选择了自主实现内存模型。
 Memcached的内存模式，官方定义为 ”Slab Allocation“，大致流程图如下：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\memcatch内存管理机制.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/memcatch内存管理机制.png)
 
 上图为我们描述了如下几点：
 1、chunk是Memcached用来存储数据的最小单位，就好像一个盒子，每个盒子里装的是我们的午饭一样。Memcache这样设计的初衷是为了尽量减少内存碎片的问题，熟练掌握内存变成的童鞋，相信对内存碎片都有 ”刻骨铭心“ 的感觉，这里就不赘述了
@@ -1169,7 +1169,7 @@ Memcached的内存模式，官方定义为 ”Slab Allocation“，大致流程�
 
 Redis在这一方面的处理相对简单，大致的形式如下：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\redis内存管理机制.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/redis内存管理机制.png)
 
 Redis每一个数据块都是根据数据类型和大小进行分配的，这一块数据的元数据（比如数据块大小）会存入内存块的头部，real_ptr是redis调用malloc后返回的指针。redis将内存块的大小size存入头部，size所占据的内存大小是已知的，为size_t类型的长度，然后返回ret_ptr。当需要释放内存的时候，ret_ptr被传给内存管理程序。通过ret_ptr，程序可以很容易的算出real_ptr的值，然后将real_ptr传给free释放内存。
 
@@ -1347,7 +1347,7 @@ public class CacheConfiguration extends CachingConfigurerSupport {
 
 - mirror queue：镜像队列，作为master queue的备份。在master queue所在节点挂掉之后，系统把mirror queue提升为master queue，负责处理客户端队列操作请求。注意，mirror queue只做镜像，设计目的不是为了承担客户端读写压力。
 
-  ![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rabbit-mq.png)
+  ![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rabbit-mq.png)
 
 ​        如上图有两个consumer消费队列A，这两个consumer连在了集群的不同机器上。RabbitMQ集群中的任何一个节点都拥有集群上所有队列的元信息，所以连接到集群中的任何一个节点都可以，主要区别在于有的consumer连在master queue所在节点，有的连接在非master queue节点上。
 
@@ -1367,7 +1367,7 @@ public class CacheConfiguration extends CachingConfigurerSupport {
   - Fanout：转发消息到所有绑定队列
   - Direct Exchange：Direct Exchange是RabbitMQ默认的交换机模式，也是最简单的模式，根据key全文匹配去寻找队列。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rabbitmq_dirctExchange.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rabbitmq_dirctExchange.jpg)
 
 第一个 X - Q1 就有一个 binding key，名字为 orange； X - Q2 就有 2 个 binding key，名字为 black 和 green。*当消息中的 路由键 和 这个 binding key 对应上的时候，那么就知道了该消息去到哪一个队列中。*
 
@@ -1763,7 +1763,7 @@ rabbitMQ 的消费模式分两种 推（ Push）模式和拉（ Pull ）模式 �
 
 ​	起初是由 LinkedIn 公司采用 Scala 语言开发的一个分布式、多分区、多副本且基于 zookeeper 协调的分布式消息系统，现已捐献给 Apache 基金会。它是一种高吞吐量的分布式发布订阅消息系统，以可水平扩展和高吞吐率而被广泛使用。目前越来越多的开源分布式处理系统如 Cloudera、Apache Storm、Spark、Flink 等都支持与 Kafka 集成。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\kafka.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/kafka.png)
 
 ​	说实话，Kafka我觉得就是看到了RabbitMQ这个缺陷才设计出的一个改进版，改进的点就是：把一个队列的单一master变成多个master，即一台机器扛不住qps，那么我就用多台机器扛qps，把一个队列的流量均匀分散在多台机器上；这里面的每个master queue 在Kafka中叫做Partition，即一个分片。一个队列有多个主分片，每个主分片又有若干副分片做备份，同步机制类似于RabbitMQ。
 
@@ -1791,7 +1791,7 @@ rabbitMQ 的消费模式分两种 推（ Push）模式和拉（ Pull ）模式 �
 
 **注意，多个master之间的数据没有交集，即一条消息要么发送到这**个master queue，要么发送到另外一个master queue。**
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\kafka-consume.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/kafka-consume.png)
 
 ​	队列读取的时候虚拟出一个Group的概念，**一个Topic内部的消息，只会路由到同Group内的一个consumer上**，同一个Group中的consumer消费的消息是不一样的；Group之间共享一个Topic，看起来就是一个队列的多个拷贝。所以，为了达到多个Group共享一个Topic数据，**Kafka并不会像RabbitMQ那样消息消费完毕立马删除**，而是必须在后台配置保存日期，即只保存最近一段时间的消息，超过这个时间的消息就会从磁盘删除，这样就保证了在一个时间段内，Topic数据对所有Group可见（这个特性使得Kafka非常适合做一个公司的数据总线）。队列读同样是读主分片，并且为了优化性能，消费者与主分片有一 一的对应关系，如果消费者数目大于分片数，则存在某些消费者得不到消息。
 
@@ -2240,7 +2240,7 @@ public class YdecConsumer {
 
 其实在这里我们应说一下如何根据原生的kafk接口去创建自己用的API，所以在这里我们先讲解一下推送到kafka如何把消息推送到kafka服务器上，produce采用push 的方式把消息推送到broker（服务器）上，每条消息都会被append到partition上（或者说topic上）
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\kafka-constructor.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/kafka-constructor.jpg)
 
 整个生产者由两个线程执行，主线程由kafkaproducer创建消息，然后通过可能的拦截器，序列化器和分区器的作用之后缓存到消息累加器	RecoredAccumulator。Sender线程负责从RecoredAccumulator中获取消息并将其发送到kafka。RecoredAccumulator主要用来缓存消息，以便Sender线程可以批量发送，RecoredAccumulator缓存的大小可以通过客户端配置参数buffer.memory(默认32m),如果生产产生消息的速度超过发送服务器的速度，会导致生产者空间不足，这个时候kafkaproducer 的send()方法要么阻塞，要么抛出异常取决于max.block.ms(默认60秒)；
 
@@ -2356,7 +2356,7 @@ acks = all  这意味着leader将等待完整的同步副本集以确认记录�
 
 ### 1:rocketmq包括四大核心组成部分：**NameServer**、**Broker**、**Producer**以及**Consumer**四部分。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rocketmq_architecture_3.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rocketmq_architecture_3.png)
 
 RocketMQ架构上主要分为四部分，如上图所示:
 
@@ -2444,7 +2444,7 @@ nameserver启动流程：
 
 org.apache.rocketmq.store.CommitLog：RocketMQ 对存储消息的物理文件的抽象实现，也就是物理CommitLog文件的具体实现。org.apache.rocketmq.store.MappedFile：CommitLog文件在内存中的映射文件，映射文件同时具有内存的写入速度和与磁盘一样可靠的持久化方式。org.apache.rocketmq.store.MappedFileQueue：映射文件队列中有全部的CommitLog映射文件，第一个映射文件为最先过期的文件，最后一个文件是最后过期的文件，最新的消息总是写入最后一个映射文件。CommitLog、MappedFileQueue、MappedFile与物理CommitLog文件的关系如图
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rocketmq文件结构.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rocketmq文件结构.png)
 
 每个 MappedFileQueue 包含多个 MappedFile，就是真实的物理 CommitLog 文件。在Java 中通过 java.nio.MappedByteBuffer 来实现文件的内存映射，即文件读写都是通过MappedByteBuffer（其实是Page Cache）来操作的。写入数据时先加锁，然后通过Append方式写入最新MappedFile。对于读取消息，大部分情况下用户只关心最新数据，而这些数据都在Page Cache中，也就是说，读写文件就是在Page Cache中进行的，其速度几乎等于直接操作内存的速度。
 
@@ -2456,7 +2456,7 @@ org.apache.rocketmq.store.CommitLog.GroupCommitService——同步刷盘服务,�
 
 正常同步刷盘线程会间隔 10ms 执行一次org.apache.rocketmq.store.CommitLog.GroupCommitService.doCommit（）方法，该方法循环每一个同步刷盘请求，如果刷盘成功，那么唤醒等待刷盘请求锁的存储消息线程，并告知刷盘成功
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rocketmq同步刷盘.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rocketmq同步刷盘.jpg)
 
 
 
@@ -2464,13 +2464,13 @@ org.apache.rocketmq.store.CommitLog.GroupCommitService——同步刷盘服务,�
 
 org.apache.rocketmq.store.CommitLog.CommitRealTimeService——异步转存服务。Broker通过配置读写分离将消息写入直接内存（Direct Memory，简称 DM），然后通过异步转存服务，将DM 中的数据再次存储到 Page Cache中，以供异步刷盘服务将Page Cache刷到磁盘中
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rocketmq异步刷盘.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rocketmq异步刷盘.jpg)
 
 #### (3)RocketMQ的存储设计中为什么写文件这么快
 
 很大一部分是基于 Kafka的设计进行优化的，这里我们非常感谢Kafka的设计和开发人员，有了你们才成就了今天的RocketMQ。RocketMQ是基于Java编写的消息中间件，支持万亿级的消息扭转和保存，RocketMQ写文件为什么会这么快呢？
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rocketmq读取文件.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rocketmq读取文件.png)
 
 - Page Cache
 
@@ -2506,7 +2506,7 @@ Broker主从同步数据有两种：配置数据和消息数据。
 
 ### 10:源码分析(理解)
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\rocketmq源码流程.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/rocketmq源码流程.jpg)
 
 ## (五):ZeroMQ /activemq
 
@@ -3007,7 +3007,7 @@ Elasticsearch集群可以包含多个索引(indices)（数据库），每一个�
 Relational DB -> Databases -> Tables -> Rows -> Columns
 **Elasticsearch -> Indices （索引/库）-> Types （类型/表）-> Documents （文档/行）-> Fields（字段/列）**
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\es-sql对比.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/es-sql对比.jpg)
 
 索引词(term)：是一个能够被索引的精确值，索引词是可以通过term查询进行准确的搜索；
 
@@ -3025,7 +3025,7 @@ Elasticsearch采用了倒排索引的方式，这种方式比传统的关系型�
 
   集群是一个或者一个以上的节点（服务器）的集合。并在所有节点上提供联合的索引和搜索功能。集群由唯一的名称标识，默认情况下是“elasticsearch”。该名称很重要，因为如果节点设置为通过其名称加入集群，则节点只能是集群的一部分。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\es集群.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/es集群.jpg)
 
 2) 节点Node
 
@@ -3097,7 +3097,7 @@ routing 是一个可变值，默认是文档的 _id ，也可以设置成一个�
 
 对外是以HTTP协议的方式约定对外提供；官方文档用的是curl模拟工具，这是控制台工具，有一个Head插件
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\es-Rest请求头.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/es-Rest请求头.jpg)
 
 ```java
 //官方给出的java与交互
@@ -3200,7 +3200,7 @@ Sense 是一个 [Kibana](https://www.elastic.co/guide/en/kibana/4.6/index.html) 
 
 第一行永远都是从#!/bin/bash开始的，“#!”是一个约定的标记，它告诉系统这个脚本需要什么解释器来执行
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\shell\whereis bash.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/shell\whereis bash.jpg)
 
 ##  一：【变量】
 
@@ -3617,7 +3617,7 @@ Netty 提供了一个特殊ChannelInboundHandlerAdapter的子类 ：ChannelIniti
 
 ### 1:EventLoop
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\Eventloop类层次结构.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/Eventloop类层次结构.jpg)
 
 一个 EventLoopGroup 包含一个或者多个 EventLoop； 
 一个 EventLoop 在它的生命周期内只和一个 Thread 绑定； 
@@ -3648,7 +3648,7 @@ Netty 提供了一个特殊ChannelInboundHandlerAdapter的子类 ：ChannelIniti
 - ChannelOutboundHandlerAdapter
 - ChannelDuplexHandler
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\netty-channelhandler.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/netty-channelhandler.jpg)
 
 最常见的情况是，你的应用程序会利用一个 ChannelHandler 来接收解码消息，并对该数据应用业务逻辑。要创建一个这样的 ChannelHandler，你只需要扩展基类 **SimpleChannel-InboundHandler**<T>，其中 T 是你要处理的消息的 Java 类型 。在这个 ChannelHandler 中， 你将需要重写基类的一个或者多个方法，并且获取一个到 ChannelHandlerContext 的引用，这个引用将作为输入参数传递给 ChannelHandler 的所有方法。
 
@@ -3843,7 +3843,7 @@ Netty使用了CompositeByteBuf来优化套接字的I/O操作，尽可能地消�
 
 # 四：MySQL服务器逻辑架构
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\20170801185146233.png)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/20170801185146233.png)
 
 ### （一）：三个层次：
 
@@ -3869,7 +3869,7 @@ Netty使用了CompositeByteBuf来优化套接字的I/O操作，尽可能地消�
 
   	innoDB存储引擎是多线程的模型，后台有很多不同的后台线程
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\PASOScreenShot20190115113645865.PNG)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/PASOScreenShot20190115113645865.PNG)
 
 ##### 1)Master Thread
 
@@ -3893,7 +3893,7 @@ Netty使用了CompositeByteBuf来优化套接字的I/O操作，尽可能地消�
 
 InnoDB的逻辑存储结构
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\PASOScreenShot20190115113216122.PNG)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/PASOScreenShot20190115113216122.PNG)
 
 正如之前提到的，MySQL 不会直接去修改磁盘的数据，因为这样做太慢了，MySQL 会先改内存(Buffer Pool)，然后记录 redo log，等有空了再刷磁盘，如果内存里没有数据，就去磁盘 load。
 
@@ -3934,7 +3934,7 @@ innotDB存储引擎是基于自盘存储的，并将其中的记录按照页的�
 
 在 InnoDB 存储引擎中，所有的数据都被**逻辑地**存放在表空间中，表空间（tablespace）是存储引擎中最高的存储逻辑单位，在表空间的下面又包括段（segment）、区（extent）、页（page）：同一个数据库实例的所有表空间都有相同的页大小；默认情况下，表空间中的页大小都为 16KB，当然也可以通过改变 `innodb_page_size` 选项对默认大小进行修改，需要注意的是不同的页大小最终也会导致区大小的不同：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-Tablespace-segment-extent-page-row.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-Tablespace-segment-extent-page-row.jpg)
 
 从图中可以看出，在 InnoDB 存储引擎中，一个区的大小最小为 1MB，页的数量最少为 64 个。
 
@@ -3955,7 +3955,7 @@ CREATE TABLE test_frm(
 
 当我们使用上面的代码创建表时，会在磁盘上的 `datadir` 文件夹中生成一个 `test_frm.frm` 的文件，这个文件中就包含了表结构相关的信息：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-frm-and-ibd-file.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-frm-and-ibd-file.jpg)
 
 > MySQL 官方文档中的 [11.1 MySQL .frm File Format](https://dev.mysql.com/doc/internals/en/frm-file-format.html) 一文对于 `.frm` 文件格式中的二进制的内容有着非常详细的表述，在这里就不展开介绍了。
 
@@ -3967,13 +3967,13 @@ InnoDB 中用于存储数据的文件总共有两个部分，一是系统表空�
 
 与现有的大多数存储引擎一样，InnoDB 使用页作为磁盘管理的最小单位；数据在 InnoDB 存储引擎中都是按行存储的，每个 16KB 大小的页中可以存放 2-200 行的记录。当 InnoDB 存储数据时，它可以使用不同的行格式进行存储；MySQL 5.7 版本支持以下格式的行存储方式：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-Antelope-Barracuda-Row-Format.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-Antelope-Barracuda-Row-Format.jpg)
 
 Antelope 是 InnoDB 最开始支持的文件格式，它包含两种行格式 Compact 和 Redundant，它最开始并没有名字；Antelope 的名字是在新的文件格式 Barracuda 出现后才起的，Barracuda 的出现引入了两种新的行格式 Compressed 和 Dynamic；InnoDB 对于文件格式都会向前兼容，而官方文档中也对之后会出现的新文件格式预先定义好了名字：Cheetah、Dragon、Elk 等等。
 
 两种行记录格式 Compact 和 Redundant 在磁盘上按照以下方式存储：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-COMPACT-And-REDUNDANT-Row-Format.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-COMPACT-And-REDUNDANT-Row-Format.jpg)
 
 Compact 和 Redundant 格式最大的不同就是记录格式的第一个部分；在 Compact 中，行记录的第一部分倒序存放了一行数据中列的长度（Length），而 Redundant 中存的是每一列的偏移量（Offset），从总体上上看，Compact 行记录格式相比 Redundant 格式能够减少 20% 的存储空间。
 
@@ -3987,13 +3987,13 @@ Compact 和 Redundant 格式最大的不同就是记录格式的第一个部分�
 
 页是 InnoDB 存储引擎管理数据的最小磁盘单位，而 B-Tree 节点就是实际存放表中数据的页面，我们在这里将要介绍页是如何组织和存储记录的；首先，一个 InnoDB 页有以下七个部分：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-InnoDB-B-Tree-Node.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-InnoDB-B-Tree-Node.jpg)
 
 每一个页中包含了两对 header/trailer：内部的 Page Header/Page Directory 关心的是页的状态信息，而 Fil Header/Fil Trailer 关心的是记录页的头信息。
 
 在页的头部和尾部之间就是用户记录和空闲空间了，每一个数据页中都包含 Infimum 和 Supremum 这两个**虚拟**的记录（可以理解为占位符），Infimum 记录是比该页中任何主键值都要小的值，Supremum 是该页中的最大值：
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-Infimum-Rows-Supremum.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-Infimum-Rows-Supremum.jpg)
 
 User Records 就是整个页面中真正用于存放行记录的部分，而 Free Space 就是空余空间了，它是一个链表的数据结构，为了保证插入和删除的效率，整个页面并不会按照主键顺序对所有记录进行排序，它会自动从左侧向右寻找空白节点进行插入，行记录在物理存储上并不是按照顺序的，它们之间的顺序是由 `next_record` 这一指针控制的。
 
@@ -4229,7 +4229,7 @@ MyISAM只支持表级锁，而Innodb支持行级锁，具有比较好的并发�
 
 在上一节中，我们谈了行记录的存储和页的存储，在这里我们就要从更高的层面看 InnoDB 中对于数据是如何存储的；InnoDB 存储引擎在绝大多数情况下使用 B+ 树建立索引，这是关系型数据库中查找最为常用和有效的索引，但是 B+ 树索引并不能找到一个给定键对应的具体值，它只能找到数据行对应的页，然后正如上一节所提到的，数据库把整个页读入到内存中，并在内存中查找具体的数据行。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-B+Tree.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-B+Tree.jpg)
 
 MyISAM使用B+树作为索引结构，叶节点保存的是存储数据的地址，主键索引key值唯一，辅助索引key可以重复，二者在结构上相同。
 
@@ -4263,7 +4263,7 @@ CREATE TABLE users(
 
 如果使用上面的 SQL 在数据库中创建一张表，B+ 树就会使用 `id` 作为索引的键，并在叶子节点中存储一条记录中的**所有**信息。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\mysql-Clustered-Index.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/mysql-Clustered-Index.jpg)
 
 > 图中对 B+ 树的描述与真实情况下 B+ 树中的数据结构有一些差别，不过这里想要表达的主要意思是：聚集索引叶节点中保存的是整条行记录，而不是其中的一部分。
 
@@ -4503,7 +4503,7 @@ select * from users where adddate<‘2007-01-01';
 
 ##### V:查询的执行的基础
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\sql查询执行路径.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/sql查询执行路径.jpg)
 
 1. 查询缓存
 2. 服务器进行SQL解析、预处理，再由优化去生成对应的执行计划。
@@ -5021,7 +5021,7 @@ rdd4.collect()
 
 ## 4：Spark架构原理
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\spark架构图.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/spark架构图.jpg)
 
 - **Cluster Manager(Master)**：在standalone模式中即为Master主节点，控制整个集群，监控worker。在YARN模式中为资源管理器
 - **Worker节点**：从节点，负责控制计算节点，启动Executor或者Driver。
@@ -5054,7 +5054,7 @@ RDD的每个partition，在spark节点上存储时，默认都是放在内存中
 
 ## 一个spark程序的执行流程
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\spark程序执行流程.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/spark程序执行流程.jpg)
 
 - **A ->** 当 Driver 进程被启动之后,首先它将发送请求到Master节点上,进行Spark应用程序的注册
 - **B ->** Master在接受到Spark应用程序的注册申请之后,会发送给Worker,让其进行资源的调度和分配.
@@ -5986,7 +5986,7 @@ K8s 集群一般会管理多个节点，每个节点都有自己的 docker 环�
 
 **性质** **6.1** 树中的结点数等于树的边数加 1，也等于所有结点的度数之和加 1。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\树的分类.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/树的分类.jpg)
 
 ## 二：B树(也叫B-)与B+树
 
@@ -6101,7 +6101,7 @@ B树的搜索，从根结点开始，对结点内的关键字（有序）序列�
 
 红叔的情况，其实相对来说比较简单的，如下图所示，只需要通过修改父、叔的颜色为黑色，祖的颜色为红色，而且回去递归的检查祖节点即可
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black2.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black2.jpg)
 
 - **黑叔**
 
@@ -6109,19 +6109,19 @@ B树的搜索，从根结点开始，对结点内的关键字（有序）序列�
 
 - Case 1:[先右旋，在改变颜色(根节点必须为黑色，其两个子节点为红色，叔节点不用改变)],如下图所示，注意省略黑哨兵节点
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black3.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black3.jpg)
 
 - Case 2:[先左旋变成Case1中的情况，再右旋，最后改变颜色(根节点必须为黑色，其两个子节点为红色，叔节点不用改变)],如下图所示，注意省略黑哨兵节点
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black4.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black4.jpg)
 
 - Case 3:[先左旋，最后改变颜色(根节点必须为黑色，其两个子节点为红色，叔节点不用改变)],如下图所示，注意省略黑哨兵节点
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black5.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black5.jpg)
 
 - Case 4:[先右旋变成Case 3的情况，再左旋，最后改变颜色(根节点必须为黑色，其两个子节点为红色，叔节点不用改变)],如下图所示，注意省略黑哨兵节点
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black6.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black6.jpg)
 
 以上就是红黑树新增节点所有可能的操作，下面会介绍红黑树中的删除操作
 
@@ -6137,7 +6137,7 @@ B树的搜索，从根结点开始，对结点内的关键字（有序）序列�
 
 1.对于红黑树而言，单支节点的情况只有如下图所示的一种情况，即为当前节点为黑色，其孩子节点为红色,(1.假设当前节点为红色，其两个孩子节点必须为黑色，2.若有孙子节点，则必为黑色，导致黑子数量不等，而红黑树不平衡)
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black1.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black1.jpg)
 
 2.由于红黑树是特殊的二叉查找树，它的删除和二叉查找树类型，真正的删除点即为删除点A的中序遍历的后继(前继也可以)，通过红黑树的特性可知这个后继必然最多只能有一个孩子，其这个孩子节点必然是右孩子节点，从而为单支情况(即这个后继节点只能有一个红色孩子或没有孩子)
 
@@ -6145,45 +6145,45 @@ B树的搜索，从根结点开始，对结点内的关键字（有序）序列�
 
 - Case 1:被删除的节点为红色，则这节点必定为叶子节点(首先这里的被删除的节点指的是真正删除的节点，通过上文得知的真正删除的节点要么是节点本身，要么是其后继节点，若是节点本身则必须为叶子节点，不为叶子节点的话其会有左右孩子，则真正删除的是其右孩子树上的最小值，若是后继节点，也必须为叶子节点，若不是则其也会有左右孩子，从而和2中相违背)，这种情况下删除红色叶节点就可以了，不用进行其他的操作了。
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black7.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black7.jpg)
 
 - Case 2:被删除的节点是黑色，其子节点是红色，将其子节点顶替上来并改变其颜色为黑色，如下图所示
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black8.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black8.jpg)
 
 - Case 3:被删除的节点是黑色，其子节点也是黑色，将其子节点顶替上来，变成了双黑的问题，此时有以下情况
   - Case 1:新节点的兄弟节点为**红色**，此时若新节点在左边则做左旋操作，否则做右旋操作，之后再将其父节点颜色改变为红色，兄弟节点
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black9.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black9.jpg)
 
 从图中可以看出，操作之后红黑树并未达到平衡状态，而是变成的**黑兄**的情况
 
 - Case 2:新节点的兄弟节点为**黑色**,此时可能有如下情况
   - 红父二黑侄：将父节点变成黑色，兄弟节点变成红色，新节点变成黑色即可,如下图所示
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black10.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black10.jpg)
 
 - 黑父二黑侄：将父节点变成新节点的颜色，新节点变成黑色，兄弟节点染成红色，还需要继续以父节点为判定点继续判断,如下图所示
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black11.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black11.jpg)
 
 - 红侄：
 
 情况一:新节点在右子树，红侄在兄弟节点左子树，此时的操作为右旋，并将兄弟节点变为父亲的颜色，父亲节点变为黑色，侄节点变为黑色，如下图所示
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black12.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black12.jpg)
 
 情况二:新节点在右子树，红侄在兄弟节点右子树，此时的操作为先左旋，后右旋并将侄节点变为父亲的颜色，父节点变为黑色，如下图所示
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black13.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black13.jpg)
 
 情况三：新节点在左子树，红侄在兄弟节点左子树,此时的操作为先右旋在左旋并将侄节点变为父亲的颜色，父亲节点变为黑色，如下图所示
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black14.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black14.jpg)
 
 情况四：新节点在右子树，红侄在兄弟节点右子树,此时的操作为左旋，并将兄弟节点变为父节点的颜色，父亲节点变为黑色，侄节点变为黑色，如下图所示
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\red-black15.jpg)
+![image]![image](https://github.com/zhujianfeng0309/kafkaDemo/blob/origin_release/jpg/red-black15.jpg)
 
 #### 红黑树实现
 
