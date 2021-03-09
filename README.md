@@ -1,5 +1,5 @@
 # 学习目标  
-![img](https://github.com/zhujianfeng0309/kafkaDemo/jpg/学习过程.jpg)  
+![image](https://github.com/zhujianfeng0309/kafkaDemo/jpg/学习过程.jpg)  
 # java学习参考github:  
 1:提供了很多好的github学习汇总https://github.com/Snailclimb/awesome-java  
 2:三太子敖丙https://github.com/AobingJava/JavaFamily  
