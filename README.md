@@ -2,7 +2,7 @@
 
 ## 1：什么是JVM
 
-![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\JVM.png)
+![image](https://github.com/zhujianfeng0309/kafkaDemo/jpg/JVM.png)
 
 ![](D:\Users\ZHUJIANFENG789\Desktop\要懂\location\jvm-paramselect.jpg)
 
