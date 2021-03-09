@@ -457,7 +457,7 @@ G1跟踪各个Region获得其收集价值大小，在后台维护一个优先列
 >
 > 无论G1还是其他分代收集器，JVM都是使用Remembered Set来避免全局扫描：
 >
-> 每个Region都有一个对应的Remembered Set；
+> 每个Region都有一个对应的Remembered Set； 
 >
 > 每次Reference类型数据写操作时，都会产生一个Write Barrier 暂时中断操作；
 >
