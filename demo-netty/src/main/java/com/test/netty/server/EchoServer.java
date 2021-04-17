@@ -1,4 +1,4 @@
-package com.test.mq.io.netty.server;
+package com.test.netty.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -16,8 +16,7 @@ public class EchoServer{
     }
 
     public static void main(String [] args) throws InterruptedException {
-
-        new  EchoServer (8080). start();
+        new EchoServer (8080). start();
     }
 
     /**
